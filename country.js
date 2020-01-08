@@ -28,31 +28,6 @@ function getCountryDetail() {
 }
 window.onload = getCountryDetail;
 
-// function fetchBorderDetail() {
-//     const country = JSON.parse(decodeURIComponent(sessionStorage.getItem('country')));
-//     console.log(country)
-//     const { borders } = country;
-//     console.log(borders)
-//     const { alpha3Code } = country;
-//     console.log(alpha3Code)
-//     console.log(country.name)
-
-//     for (let i = 0; i < borders.length; i++) {
-//         let borderDiv = document.createElement('a');
-//         borderDiv.textContent = country.borders[i];
-//         borderDiv.dataset.code = borders[i];
-//         const borderInfo = document.getElementById('borderInfo');
-//         borderInfo.appendChild(borderDiv);
-//     }
-//     document.querySelectorAll('a').forEach((item) => {
-//         item.addEventListener('click', (event) => {
-//             sessionStorage.setItem('country', event.currentTarget.dataset.code);
-//             document.location.target = "_blank";
-//             window.location = 'country.html'
-//         })
-//     })
-// }
-
 function fetchBorderDetail(country) {
     const allCountriesData = JSON.parse(decodeURIComponent(sessionStorage.getItem('allCountriesData')));
     // console.log(allCountriesData)
